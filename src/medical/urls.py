@@ -20,6 +20,7 @@ from django.contrib import admin
 #from django.conf.urls.static import static
 
 from medical.marketing.views import HomePage
+from medical.subscribers import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,7 +28,6 @@ urlpatterns = [
     url(r'^$', HomePage.as_view(), name="home"),
 
     # Subscriber related URLs
-    url(r'^signup/$',
-    'medical.subscribers.views.subscriber_new', name='sub_new'),
+    url(r'^signup/$',views.subscriber_new, name='sub_new'),
 ]
 #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
