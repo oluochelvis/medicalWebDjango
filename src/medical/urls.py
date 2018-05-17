@@ -25,5 +25,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # Marketing pages
     url(r'^$', HomePage.as_view(), name="home"),
+
+    # Subscriber related URLs
+    url(r'^signup/$',
+    'medical.subscribers.views.subscriber_new', name='sub_new'),
 ]
 #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
