@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 
+#from django.conf import settings
+#from django.conf.urls.static import static
+
 from medical.marketing.views import HomePage
 
 urlpatterns = [
@@ -23,3 +26,4 @@ urlpatterns = [
     # Marketing pages
     url(r'^$', HomePage.as_view(), name="home"),
 ]
+#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
