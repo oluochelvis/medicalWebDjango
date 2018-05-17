@@ -29,5 +29,9 @@ urlpatterns = [
 
     # Subscriber related URLs
     url(r'^signup/$',views.subscriber_new, name='sub_new'),
+
+
+
+    
 ]
 #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
